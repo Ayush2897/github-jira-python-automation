@@ -25,11 +25,13 @@ Launch EC2 Instance:
 Launch an EC2 instance (or use your own machine).
 Install Python and pip on the EC2 instance.
 Install Flask:
-
 Install Flask using pip: pip install flask.
+
 Create Flask App:
 
 Refer to the code file "Final_code_github_to_jira_ticket_creation.py" to see how Flask is used to create a web service with an endpoint /createJira that listens for HTTP POST requests.
+
+(Why we flask here?    -  Flask is used as a web framework. Flask is a lightweight web framework for Python that allows you to quickly build web applications. In this specific case, Flask is used to create a simple web service with a single endpoint /createJira that listens for HTTP POST requests.) 
 
 Step 4: Create GitHub Webhook
 GitHub Repository Settings:
@@ -41,6 +43,8 @@ Configure Webhook:
 Set the Payload URL to your EC2 instance DNS with the path /createJira.
 Set Content type to application/json.
 Add the webhook.
+
+(why we create webhook?   - Webhooks allow you to automate actions in response to events that occur on your GitHub repository. For example, you can trigger a build process, deploy your application, or update external systems whenever a new commit is pushed or a pull request is merged.)
 
 Step 5: Test the Automation
 Commit to GitHub:
